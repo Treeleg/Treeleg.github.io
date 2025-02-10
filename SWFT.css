@@ -1,0 +1,217 @@
+body {
+    background-color: #3A3B3C;
+    font-family: Arial, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.header {
+    width: 100%;
+    text-align: center;
+    background-image: url('GradientBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+    position: relative;
+}
+.header h1 {
+    margin: 0;
+    display: inline-block;
+}
+.header img {
+    max-width: 300px;
+    height: auto;
+}
+nav {
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    position: relative;
+    top: 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+.topnav {
+    background-color: #222;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    position: relative;
+}
+.nav-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+#myLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+#myLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: inline-block;
+}
+#myLinks a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+.icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    margin-bottom: 40px;
+}
+.container, .company-text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    text-align: left;
+    font-size: 24px;
+}
+.vertical-pictures {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.vertical-pictures img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    height: auto;
+}
+.company-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+}
+.company-text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
+}
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    background-image: url(GradientBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    position: relative;
+    max-width: 100%;
+    color: white;
+}
+
+/* --- Media Queries --- */
+
+/* For Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .topnav {
+        flex-direction: column;
+        align-items: center;
+    }
+    #myLinks {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #222;
+    }
+    #myLinks a {
+        text-align: center;
+        padding: 12px;
+        display: block;
+        width: 100%;
+    }
+    .icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+    .vertical-pictures {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .content {
+        flex-direction: column; /* Switch to vertical stacking for tablet */
+        text-align: center;
+    }
+    .company-text {
+        width: 85%;  /* Allow a bit more width for tablets */
+    }
+}
+
+/* For Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .vertical-pictures {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .vertical-pictures img {
+        max-width: 90%;
+        height: auto;
+    }
+    .content {
+        flex-direction: column;  /* Stack content vertically on mobile */
+        text-align: center;
+    }
+    .company-text {
+        width: 100%;  /* Full width on mobile */
+        padding: 15px;  /* Adjust padding for smaller screens */
+    }
+}
